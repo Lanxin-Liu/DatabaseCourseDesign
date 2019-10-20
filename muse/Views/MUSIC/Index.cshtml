@@ -1,0 +1,108 @@
+﻿@model IEnumerable<muse.Models.MUSIC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MUSICNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PUBLISHER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PUBLISHTIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DURATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LIKES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PLAYTIMES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUSICCOVER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUSICPATH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LYRICS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALBUM.ALBUMNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SINGER.SINGERNAME)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUSICNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PUBLISHER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PUBLISHTIME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DURATION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LIKES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PLAYTIMES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUSICCOVER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUSICPATH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LYRICS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ALBUM.ALBUMNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SINGER.SINGERNAME)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MUSICID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MUSICID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MUSICID })
+            </td>
+        </tr>
+    }
+   
+        <form action="" method="post" enctype="multipart/form-data">
+            <h4>请上传封面……</h4><br />
+            <input type="file" name="files" /><br /><br /><br /><br />
+            <h4>请上传视频……</h4><br />
+            <input type="file" name="files" /><br /><br />
+            <input type="submit" value="提交" />
+        </form>
+        <p>@ViewBag.id</p>
+</table>

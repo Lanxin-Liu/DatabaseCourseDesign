@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities5">
+    <EntitySetMapping Name="ALBUM">
+      <EntityTypeMapping TypeName="Model.ALBUM">
+        <MappingFragment StoreEntitySet="ALBUM">
+          <ScalarProperty Name="ALBUMID" ColumnName="ALBUMID" />
+          <ScalarProperty Name="ALBUMNAME" ColumnName="ALBUMNAME" />
+          <ScalarProperty Name="ALBUMIMAGE" ColumnName="ALBUMIMAGE" />
+          <ScalarProperty Name="ALBUMPBTIME" ColumnName="ALBUMPBTIME" />
+          <ScalarProperty Name="SINGERID" ColumnName="SINGERID" />
+          <ScalarProperty Name="ALBUMINTRO" ColumnName="ALBUMINTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BUYHISTORY">
+      <EntityTypeMapping TypeName="Model.BUYHISTORY">
+        <MappingFragment StoreEntitySet="BUYHISTORY">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="BUYTIME" ColumnName="BUYTIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLLETION">
+      <EntityTypeMapping TypeName="Model.COLLETION">
+        <MappingFragment StoreEntitySet="COLLETION">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="SONGLISTID" ColumnName="SONGLISTID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMENTS">
+      <EntityTypeMapping TypeName="Model.COMMENTS">
+        <MappingFragment StoreEntitySet="COMMENTS">
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="COMMENTNUMBER" ColumnName="COMMENTNUMBER" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="SUBMITTIME" ColumnName="SUBMITTIME" />
+          <ScalarProperty Name="LIKES" ColumnName="LIKES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAULT">
+      <EntityTypeMapping TypeName="Model.FAULT">
+        <MappingFragment StoreEntitySet="FAULT">
+          <ScalarProperty Name="OBJECTID" ColumnName="OBJECTID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FAULTTYPE" ColumnName="FAULTTYPE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRIENDS">
+      <EntityTypeMapping TypeName="Model.FRIENDS">
+        <MappingFragment StoreEntitySet="FRIENDS">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FRIENDID" ColumnName="FRIENDID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORY">
+      <EntityTypeMapping TypeName="Model.HISTORY">
+        <MappingFragment StoreEntitySet="HISTORY">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="PLAYEDTIMES" ColumnName="PLAYEDTIMES" />
+          <ScalarProperty Name="PLAYSEQUENCE" ColumnName="PLAYSEQUENCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HONOR">
+      <EntityTypeMapping TypeName="Model.HONOR">
+        <MappingFragment StoreEntitySet="HONOR">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="MEDALID" ColumnName="MEDALID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MADMIN">
+      <EntityTypeMapping TypeName="Model.MADMIN">
+        <MappingFragment StoreEntitySet="MADMIN">
+          <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+          <ScalarProperty Name="ADMINPASSWORD" ColumnName="ADMINPASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDAL">
+      <EntityTypeMapping TypeName="Model.MEDAL">
+        <MappingFragment StoreEntitySet="MEDAL">
+          <ScalarProperty Name="MEDALID" ColumnName="MEDALID" />
+          <ScalarProperty Name="MEDALNAME" ColumnName="MEDALNAME" />
+          <ScalarProperty Name="MEDALINTRO" ColumnName="MEDALINTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUSER">
+      <EntityTypeMapping TypeName="Model.MUSER">
+        <MappingFragment StoreEntitySet="MUSER">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="USERPASSWORD" ColumnName="USERPASSWORD" />
+          <ScalarProperty Name="USERIMAGE" ColumnName="USERIMAGE" />
+          <ScalarProperty Name="USERSEX" ColumnName="USERSEX" />
+          <ScalarProperty Name="USERBIRTHDAY" ColumnName="USERBIRTHDAY" />
+          <ScalarProperty Name="USEREMAIL" ColumnName="USEREMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUSIC">
+      <EntityTypeMapping TypeName="Model.MUSIC">
+        <MappingFragment StoreEntitySet="MUSIC">
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="MUSICNAME" ColumnName="MUSICNAME" />
+          <ScalarProperty Name="SINGERID" ColumnName="SINGERID" />
+          <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+          <ScalarProperty Name="PUBLISHTIME" ColumnName="PUBLISHTIME" />
+          <ScalarProperty Name="ALBUMID" ColumnName="ALBUMID" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="LIKES" ColumnName="LIKES" />
+          <ScalarProperty Name="PLAYTIMES" ColumnName="PLAYTIMES" />
+          <ScalarProperty Name="MUSICCOVER" ColumnName="MUSICCOVER" />
+          <ScalarProperty Name="MUSICPATH" ColumnName="MUSICPATH" />
+          <ScalarProperty Name="LYRICS" ColumnName="LYRICS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUSICIAN">
+      <EntityTypeMapping TypeName="Model.MUSICIAN">
+        <MappingFragment StoreEntitySet="MUSICIAN">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="MUSICIANINTRO" ColumnName="MUSICIANINTRO" />
+          <ScalarProperty Name="SINGERID" ColumnName="SINGERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUSICIANWORKS">
+      <EntityTypeMapping TypeName="Model.MUSICIANWORKS">
+        <MappingFragment StoreEntitySet="MUSICIANWORKS">
+          <ScalarProperty Name="WORKS" ColumnName="WORKS" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUSICTAG">
+      <EntityTypeMapping TypeName="Model.MUSICTAG">
+        <MappingFragment StoreEntitySet="MUSICTAG">
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="TAGNAME" ColumnName="TAGNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINGER">
+      <EntityTypeMapping TypeName="Model.SINGER">
+        <MappingFragment StoreEntitySet="SINGER">
+          <ScalarProperty Name="SINGERID" ColumnName="SINGERID" />
+          <ScalarProperty Name="SINGERNAME" ColumnName="SINGERNAME" />
+          <ScalarProperty Name="SINGERIMAGE" ColumnName="SINGERIMAGE" />
+          <ScalarProperty Name="SINGERINTRO" ColumnName="SINGERINTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SONGLIST">
+      <EntityTypeMapping TypeName="Model.SONGLIST">
+        <MappingFragment StoreEntitySet="SONGLIST">
+          <ScalarProperty Name="SONGLISTID" ColumnName="SONGLISTID" />
+          <ScalarProperty Name="SONGLISTNAME" ColumnName="SONGLISTNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="COLLECTIONTIMES" ColumnName="COLLECTIONTIMES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SONGLISTMUSIC">
+      <EntityTypeMapping TypeName="Model.SONGLISTMUSIC">
+        <MappingFragment StoreEntitySet="SONGLISTMUSIC">
+          <ScalarProperty Name="MUSICID" ColumnName="MUSICID" />
+          <ScalarProperty Name="SONGLISTID" ColumnName="SONGLISTID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAG">
+      <EntityTypeMapping TypeName="Model.TAG">
+        <MappingFragment StoreEntitySet="TAG">
+          <ScalarProperty Name="TAGNAME" ColumnName="TAGNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERSONGLIST">
+      <EntityTypeMapping TypeName="Model.USERSONGLIST">
+        <MappingFragment StoreEntitySet="USERSONGLIST">
+          <ScalarProperty Name="SONGLISTID" ColumnName="SONGLISTID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ATTRIBUTEORDER" ColumnName="ATTRIBUTEORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIP">
+      <EntityTypeMapping TypeName="Model.VIP">
+        <MappingFragment StoreEntitySet="VIP">
+          <ScalarProperty Name="VIPID" ColumnName="VIPID" />
+          <ScalarProperty Name="EXPIRETIME" ColumnName="EXPIRETIME" />
+          <ScalarProperty Name="DAYS" ColumnName="DAYS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

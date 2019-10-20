@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="varchar2" MaxLength="4" Nullable="false" />
+    <Property Name="ADMINNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="ADMINPASSWORD" Type="varchar2" MaxLength="6" Nullable="false" />
+    <Property Name="ADMINIMAGE" Type="varchar2" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="ADVISOR">
+    <Key>
+      <PropertyRef Name="S_ID" />
+    </Key>
+    <Property Name="S_ID" Type="varchar2" MaxLength="5" Nullable="false" />
+    <Property Name="I_ID" Type="varchar2" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="USERID" Type="varchar2" MaxLength="7" Nullable="false" />
+    <Property Name="ADMINID" Type="varchar2" MaxLength="4" Nullable="false" />
+    <Property Name="BANTIME" Type="date" />
+    <Property Name="BANREASON" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BUY">
+    <Key>
+      <PropertyRef Name="SONGID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="SONGID" Type="varchar2" MaxLength="7" Nullable="false" />
+    <Property Name="USERID" Type="varchar2" MaxLength="6" Nullable="false" />
+    <Property Name="BUYTIME" Type="date" />
+  </EntityType>
+  <EntityType Name="CLASSROOM">
+    <Key>
+      <PropertyRef Name="BUILDING" />
+      <PropertyRef Name="ROOM_NUMBER" />
+    </Key>
+    <Property Name="BUILDING" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="ROOM_NUMBER" Type="varchar2" MaxLength="7" Nullable="false" />
+    <Property Name="CAPACITY" Type="number" Precision="4" Scale="0" />
+  </EntityType>
+  <EntityType Name="COURSE">
+    <Key>
+      <PropertyRef Name="COURSE_ID" />
+    </Key>
+    <Property Name="COURSE_ID" Type="varchar2" MaxLength="8" Nullable="false" />
+    <Property Name="TITLE" Type="varchar2" MaxLength="50" />
+    <Property Name="DEPT_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="CREDITS" Type="number" Precision="2" Scale="0" />
+  </EntityType>
+  <EntityType Name="FRIEND">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="FRIENDID" />
+    </Key>
+    <Property Name="USERID" Type="varchar2" MaxLength="6" Nullable="false" />
+    <Property Name="FRIENDID" Type="varchar2" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HELP">
+    <Key>
+      <PropertyRef Name="TOPIC" />
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="TOPIC" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="SEQ" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="INFO" Type="varchar2" MaxLength="80" />
+  </EntityType>
+  <Association Name="SYS_C0010532">
+    <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="1" />
+    <End Role="BAN" Type="Self.BAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMIN">
+        <PropertyRef Name="ADMINID" />
+      </Principal>
+      <Dependent Role="BAN">
+        <PropertyRef Name="ADMINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ADVISOR" EntityType="Self.ADVISOR" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="BAN" EntityType="Self.BAN" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="BUY" EntityType="Self.BUY" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="CLASSROOM" EntityType="Self.CLASSROOM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="COURSE" EntityType="Self.COURSE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="FRIEND" EntityType="Self.FRIEND" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HELP" EntityType="Self.HELP" Schema="SYSTEM" store:Type="Tables" />
+    <AssociationSet Name="SYS_C0010532" Association="Self.SYS_C0010532">
+      <End Role="ADMIN" EntitySet="ADMIN" />
+      <End Role="BAN" EntitySet="BAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

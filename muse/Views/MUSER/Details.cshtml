@@ -1,0 +1,82 @@
+﻿@model muse.Models.MUSER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MUSER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.USERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERPASSWORD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERPASSWORD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERIMAGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERIMAGE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERSEX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERSEX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERBIRTHDAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERBIRTHDAY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USEREMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USEREMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIP.EXPIRETIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIP.EXPIRETIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICIAN.MUSICIANINTRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICIAN.MUSICIANINTRO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.USERID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

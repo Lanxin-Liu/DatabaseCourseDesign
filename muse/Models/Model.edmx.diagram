@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="66cb337edc1f475580644a69eafaeebc" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.ALBUM" Width="1.5" PointX="1.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BUYHISTORY" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.COLLETION" Width="1.5" PointX="5.25" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.COMMENTS" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FAULT" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FRIENDS" Width="1.5" PointX="3" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.HISTORY" Width="1.5" PointX="6" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.HONOR" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MADMIN" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MEDAL" Width="1.5" PointX="3.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MUSER" Width="1.5" PointX="0.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MUSIC" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MUSICIAN" Width="1.5" PointX="6" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MUSICIANWORKS" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MUSICTAG" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SINGER" Width="1.5" PointX="1.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SONGLIST" Width="1.5" PointX="3" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SONGLISTMUSIC" Width="1.5" PointX="5.25" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TAG" Width="1.5" PointX="5.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.USERSONGLIST" Width="1.5" PointX="5.25" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VIP" Width="1.5" PointX="3" PointY="42.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.SYS_C0011190" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011193" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011226" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011227" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011219" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011220" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011210" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011211" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011229" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011202" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011203" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011207" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011208" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011223" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011224" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011197" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011205" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011213" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011216" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011231" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011192" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011195" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011199" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011217" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011214" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011200" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C0011232" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

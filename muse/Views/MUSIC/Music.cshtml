@@ -1,0 +1,419 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Muse</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/png" href="/assets/images/fev.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- animate -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <!-- owl theme default -->
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- scrollable -->
+    <link rel="stylesheet" href="/assets/css/jquery.scrollable.css">
+    <!-- audioplayer -->
+    <link rel="stylesheet" href="/assets/css/audioplayer.css">
+    <!-- menu -->
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <!-- main -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <!-- default -->
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <!-- color -->
+    <link rel="stylesheet" href="/assets/css/color.css">
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <header class="header-nav-area js-common-nav sticky-on">
+        <!-- header-nav -->
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-2 col-sm-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="/assets/images/logo.png" alt="Devaid logo"></a>
+                    </div>
+                </div><!-- col-lg-4 -->
+                <div class="col-md-7 header-nav-none">
+                    <nav class="header-nav">
+                        <div class="cssmenu" data-title="Menu">
+                            <ul class="menu list-inline">
+                                <li>
+                                    <a href="index.html">发现</a>
+                                </li>
+                                <li>
+                                    <a href="myinfo.html">我的信息</a>
+                                </li>
+                                <li>
+                                    <a href="SongList.html">我的歌单</a>
+                                </li>
+                                <li>
+                                    <a href="playhistory.html">我的历史</a>
+                                </li>
+                                <li>
+                                    <a href="News.html">消息中心</a>
+                                </li>
+                                <li>
+                                    <a href="create.html">我的创作</a>
+                                </li>
+                                <li>
+                                    <a href="/Search/Searchresult">搜索</a>
+                                </li>
+                            </ul>
+                        </div><!-- #header-menu-wrap -->
+                    </nav><!-- .header-nav -->
+                </div><!-- col-lg-7 -->
+
+                <div class="col-md-3 pl-0 pull-right">
+                    <div class="header-icon text-right">
+                        <ul class="list-inline">
+                            <li class="music primary-bg" id="js-music"> <i class="fa fa-music"></i></li>
+                            <li class=""><a href="login.html"><i class="fa fa-sign-in"></i></a></li>
+                            <li class="sidebar-menu"><span id="sidebar_menu_icon"><img alt="Icon" src="/assets/images/menu.png"></span></li>
+                        </ul>
+                    </div><!-- header-icon -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </header><!-- header-nav -->
+
+    <div class="js-offcanvas-menu js-index1-nav" id="js_offcanvas_menu">
+        <nav class="header-nav">
+            <span class="js-offcanvas-close"><i class="pe-7s-close"></i></span>
+            <div class="cssmenu" data-title="Menu">
+                <ul class="menu list-inline">
+                    <li>
+                        <a href="index.html">发现</a>
+                    </li>
+                    <li>
+                        <a href="myinfo.html">我的信息</a>
+                    </li>
+                    <li>
+                        <a href="SongList.html">我的歌单</a>
+                    </li>
+                    <li>
+                        <a href="playhistory.html">我的历史</a>
+                    </li>
+                    <li>
+                        <a href="News.html">消息中心</a>
+                    </li>
+                    <li>
+                        <a href="create.html">我的创作</a>
+                    </li>
+                    <li>
+                        <a href="/Search/Searchresult">搜索</a>
+                    </li>
+                </ul>
+            </div><!-- #header-menu-wrap -->
+
+        </nav> <!-- header-nav -->
+    </div><!-- js-offcanvas-menu -->
+
+    <section class="js-breadcrumb-area">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12 text-center has-color">
+                    <div class="js-breadcrumb-content">
+                        <h2>歌 <span class="primary-color">曲 </span>详 情</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- js-breadcrumb-area -->
+
+    <div class="xuanfu">
+        <div class="js-info-album-player" id="js-info-album-player">
+            <div class="container-fluid pr-0">
+                <div class="row">
+                    <div class="col-lg-12 dark-overlay">
+                        <div class="audio-player">
+                            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                            <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                                <div class="jp-type-playlist">
+                                    <div class="jp-gui jp-interface row">
+                                        <div class="col-lg-1 col-sm-2 pr-0">
+                                            <div class="jp-controls">
+                                                <button class="jp-previous" tabindex="0"><i class="fa fa-step-backward"></i></button>
+                                                <button class="jp-play" tabindex="0"><i class="fa fa-play"></i></button>
+                                                <button class="jp-next" tabindex="0"><i class="fa fa-step-forward"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-2 js-album-playing-text">
+                                            <a href="javascript:void(0);" id="playlist-text">
+                                                <div class="jp-now-playing flex-item">
+                                                    <div class="jp-track-name"></div>
+                                                    <div class="jp-artist-name"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-2">
+                                            <div class="jp-toggles">
+                                                <button id="playlist-toggle" class="jp-show-playlist" tabindex="0" title="Playlist">
+                                                    <i class="fa fa-music" style="margin-left: 40px"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-5 jp-volume-controls">
+                                            <div class="">
+                                                <button class="jp-mute" tabindex="0"><i class="fa fa-volume-up"></i></button>
+                                                <div class="jp-volume-bar">
+                                                    <div class="jp-volume-bar-value">
+                                                        <div class="bullet">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="jp-progress-container">
+                                                <div class="jp-time-holder">
+                                                    <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
+                                                    <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
+                                                </div>
+                                                <div class="jp-progress">
+                                                    <div class="jp-seek-bar">
+                                                        <div class="jp-play-bar">
+                                                            <div class="bullet">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="playlist-wrap" class="jp-playlist">
+                                        <ul>
+                                            <li>&nbsp;</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-no-solution">
+                                        <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- audio-player -->
+                    </div><!-- col-lg-9 -->
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!-- js-info-album-player -->
+
+    </div>
+
+    <section class="js-product-details-area has-color bg-dark pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="js-product-details-thumbnail">
+                        <img src=@ViewBag.img alt="product thumbnail">
+                    </div>
+
+                    <div class="likes-add">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="align-items-center">
+                                    <a href="#"><img class="primary-color" src="/assets/images/collect.png"></a>
+                                    <span class="text-white text-right">收藏</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="align-items-center">
+                                    <a href="#"><img class="primary-color" src="/assets/images/share.png"></a>
+                                    <span class="text-white">分享</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="align-items-center">
+                                    <a href="#"><img class="primary-color" src="/assets/images/add.png"></a>
+                                    <span class="text-white">添加</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div><!-- likes-add -->
+                </div><!-- col-lg-5 -->
+                <div class="col-lg-6 offset-lg-1 p-lg-0">
+                    <div class="js-product-details-content">
+                        <div class="section-title mb-30">
+                            <h3>Music Name here</h3>
+                        </div><!-- section-title -->
+                        <ul class="js-artist-song-detail list-inline">
+                            <p>
+                                <span class="primary-color">艺术家:</span> <a href="SingleArtist?id=@ViewBag.SingerID">@ViewBag.singername</a>
+                                <br>  <span class="primary-color">专辑:</span> <a href="Album?id=@ViewBag.albumID">@ViewBag.albumname</a>
+
+                            </p>
+                        </ul>
+
+                        <div class="section-title mb-30">
+                            <h4>歌词详情</h4>
+
+                        </div><!-- section-title -->
+                        <!--歌词-->
+
+                        <div class="js-audio-playlist scroll">
+                            <ul class="list-inline">
+                                <div class="col-lg-12">
+                                    <p style="white-space:pre-line;">
+                                        @ViewBag.lyrics
+                                    </p>
+                                </div>
+                            </ul>
+                        </div>
+
+
+                    </div><!-- js-product-details-content -->
+                </div><!-- col-lg-6 -->
+            </div><!-- row -->
+
+
+            <div class="row">
+                <div class="col-lg-12 pt-10 ">
+                    <div class="post-single-comment-form bg-black">
+                        <div class="js-music-playlist scroll">
+                            <h3 class="js-single-comment-title"><span class="primary-color">分享</span> 你的所听所想</h3>
+                            @*<form id="contact-form">*@
+                                <textarea id="comttext" placeholder="写下你的评论"  songid=@ViewBag.id></textarea>
+                                </div><!-- row -->
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">
+                                        <button id="publishcomt" class="btn btn-primary">发表评论</button>
+                                    </div>
+                                </div><!-- row -->
+                            @*</form>*@<!-- form close-->
+                            <h4><span>3条评论</span></h4>
+                            <ul class="comment-list">
+                                <!-- comment-list    -->
+                                <li class="comment">
+                                    <div class="author-info">
+                                        <div class="author-info-image text-center">
+                                            <p><a href="#">添加好友</a></p>
+                                        </div>
+                                        <div class="author-desc">
+                                            <div class="author-title">
+                                                <strong>@ViewBag.othername[0]</strong>
+                                            </div>
+                                            <p>@ViewBag.othercontent[0]</p>
+                                        </div>
+                                    </div><!-- author-info -->
+                                </li><!-- comment -->
+                                <li class="comment">
+                                    <div class="author-info">
+                                        <div class="author-info-image text-center">
+                                            <p><a href="#">添加好友</a></p>
+                                        </div>
+                                        <div class="author-desc">
+                                            <div class="author-title">
+                                                <strong>@ViewBag.othername[1]</strong>
+                                            </div>
+                                            <p>@ViewBag.othercontent[1]</p>
+                                        </div>
+                                    </div><!-- author-info -->
+                                </li><!-- comment -->
+                                <li class="comment">
+                                    <div class="author-info">
+                                        <div class="author-info-image text-center">
+                                            <p><a href="#">添加好友</a></p>
+                                        </div>
+                                        <div class="author-desc align-right">
+                                            <div class="author-title">
+                                                <strong>@ViewBag.othername[2]</strong>
+                                            </div>
+                                            <p>@ViewBag.othercontent[2]</p>
+                                        </div>
+                                    </div><!-- author-info -->
+                                </li><!-- comment -->
+                                <li class="comment hidden">
+                                    <div class="author-info">
+                                        <div class="author-desc align-right">
+                                            <div class="author-title">
+                                                <strong></strong>
+                                            </div>
+                                            <p></p>
+                                        </div>
+                                    </div><!-- author-info -->
+                                </li><!-- comment -->
+                            </ul>
+                        </div><!-- post-single-comment-form -->
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </section><!-- js-product-details-area -->
+
+    <span class="scrolltop"><i class="pe-7s-angle-up"></i></span>
+
+
+
+
+    <footer class="js-footer-area has-color">
+        <div class="js-footer-subscribe pt-100 pb-100 bg-dark has-color">
+
+        </div><!-- js-footer-subscribe -->
+    </footer> <!-- footer End-->
+
+
+    <script src="/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/countdown.js"></script>
+    <script src="/assets/js/jquery.jplayer.min.js"></script>
+    <script src="/assets/js/jplayer.playlist.min.js"></script>
+    <script src="/assets/js/audio-player.js"></script>
+    <script src="/assets/js/audioplayer.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script type="text/javascript">
+        $("#publishcomt").on('click', function () {
+            $.ajax({
+                type: "POST",
+                url: "/Music/Publishcomt",
+                data: {
+                    songid: praseInt(Number($("#commtext").attr("songid"))),
+                    comttext: $("#comttext").val()
+                },
+                success: function (songid, comttext) {
+                    window.location.reload();
+                },
+                error: function (e) {
+                    alert("lallaa");
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
+

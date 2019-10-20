@@ -1,0 +1,269 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Muste</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/png" href="assets/images/fev.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- owl theme default -->
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- scrollable -->
+    <link rel="stylesheet" href="assets/css/jquery.scrollable.css">
+    <!-- audioplayer -->
+    <link rel="stylesheet" href="assets/css/audioplayer.css">
+    <!-- menu -->
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <!-- main -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- default -->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!-- color -->
+    <link rel="stylesheet" href="assets/css/color.css">
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <header class="header-nav-area js-common-nav sticky-on">
+        <!-- header-nav -->
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-2 col-sm-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="Devaid logo"></a>
+                    </div>
+                </div><!-- col-lg-4 -->
+                <div class="col-md-7 header-nav-none">
+                    <nav class="header-nav">
+                        <div class="cssmenu" data-title="Menu">
+                            <ul class="menu list-inline">
+                                <li>
+                                    <a href="index.html">发现</a>
+                                </li>
+                                <li>
+                                    <a href="myinfo.html">我的信息</a>
+                                </li>
+                                <li>
+                                    <a href="SongList.html">我的歌单</a>
+                                </li>
+                                <li class="active">
+                                    <a href="playhistory.html">我的历史</a>
+                                </li>
+                                <li>
+                                    <a href="News.html">消息中心</a>
+                                </li>
+                                <li>
+                                    <a href="create.html">我的创作</a>
+                                </li>
+                            </ul>
+                        </div><!-- #header-menu-wrap -->
+                    </nav><!-- .header-nav -->
+                </div><!-- col-lg-7 -->
+
+                <div class="col-md-3 pl-0 pull-right">
+                    <div class="header-icon text-right">
+                        <ul class="list-inline">
+                            <li class="music primary-bg" id="js-music"> <i class="fa fa-music"></i></li>
+                            <li class=""><a href="../Login/index"><i class="fa fa-sign-in"></i></a></li>
+                            <li class="sidebar-menu"><span id="sidebar_menu_icon"><img alt="Icon" src="assets/images/menu.png"></span></li>
+                        </ul>
+                    </div><!-- header-icon -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </header><!-- header-nav -->
+
+    <div class="js-offcanvas-menu js-index1-nav" id="js_offcanvas_menu">
+        <nav class="header-nav">
+            <span class="js-offcanvas-close"><i class="pe-7s-close"></i></span>
+            <div class="cssmenu" data-title="Menu">
+                <ul class="menu list-inline">
+                    <li>
+                        <a href="index.html">发现</a>
+                    </li>
+                    <li>
+                        <a href="myinfo.html">我的信息</a>
+                    </li>
+                    <li>
+                        <a href="SongList.html">我的歌单</a>
+                    </li>
+                    <li class="active">
+                        <a href="playhistory.html">我的历史</a>
+                    </li>
+                    <li>
+                        <a href="News.html">消息中心</a>
+                    </li>
+                    <li>
+                        <a href="create.html">我的创作</a>
+                    </li>
+                </ul>
+            </div><!-- #header-menu-wrap -->
+            <div class="widget mt-3">
+                <div class="js-widget-search">
+                    <form>
+                        <input type="text" required="" placeholder="Search Here..">
+                        <i><img alt="search icon" src="assets/images/search.png"></i>
+                    </form>
+                </div>
+            </div>
+        </nav> <!-- header-nav -->
+    </div><!-- js-offcanvas-menu -->
+
+
+    <section class="js-breadcrumb-area">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12 text-center has-color">
+                    <div class="js-breadcrumb-content">
+                        <h2>MY HISTORY</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- js-breadcrumb-area -->
+    <div>
+    </div>
+    <div class="js-login2-area d-flex align-items-left  text-center">
+        <div class="container">
+            <p>  </p>
+            <div>
+                <a href="playhistory.html" class="btn btn-light btn-sm">RecentlyPlayed</a>
+                <a href="PlayedTimes.html" class="btn btn-light btn-sm">Played Times</a>
+                <a href="BuyHistory.html" class="btn btn-light btn-sm">Buy History</a>
+            </div>
+            <p>  </p>
+            <div class="js-login-content js-registartion-content bg-white">
+                <!--
+                <div class="js-add-to-cart">
+                    <a href="RecentlyPlayed.html" class="btn btn-light btn-sm">RecentlyPlayed</a>
+                </div>
+                <div class="js-add-to-cart">
+                    <a href="PlayedTimes.html" class="btn btn-light btn-sm">Played Times</a>
+                </div>
+                <div class="js-add-to-cart">
+                    <a href="BuyHistory.html" class="btn btn-light btn-sm">Buy History</a>
+                </div>-->
+                <div class="js-audio-playlist scroll">
+                    <div class="js-audio-playlist-item active">
+                        <ul class="list-inline">
+                            <li><h5>Despacito <span>- Luis Fonsi</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Perfect Places<span> - Lorde</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Why? <span>- Dj Ashraf</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>High <span>- Raper Tomal</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>The Zing <span>- Luchi</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Smooth <span>- Florida Georgia</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Smooth <span>- Florida Georgia</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Smooth <span>- Florida Georgia</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                    <div class="js-audio-playlist-item">
+                        <ul class="list-inline">
+                            <li><h5>Smooth <span>- Florida Georgia</span></h5> </li>
+                        </ul>
+                        <audio controls="" preload="auto">
+                            <source src=" assets/images/horse.mp3">
+                        </audio>
+                    </div>  <!-- js-audio-playlist-item -->
+                </div><!-- js-audio-playlist -->
+            </div>
+        </div>
+    </div>
+    <footer class="js-footer-area bg-dark has-color pb-100">
+        <!-- footer-area -->
+    </footer>
+
+
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/jquery.jplayer.min.js"></script>
+    <script src="assets/js/jplayer.playlist.min.js"></script>
+    <script src="assets/js/audio-player.js"></script>
+    <script src="assets/js/audioplayer.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

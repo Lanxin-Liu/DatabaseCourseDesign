@@ -1,0 +1,75 @@
+﻿@model IEnumerable<muse.Models.MUSER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERPASSWORD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERIMAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERSEX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERBIRTHDAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USEREMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIP.EXPIRETIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUSICIAN.MUSICIANINTRO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERPASSWORD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERIMAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERSEX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERBIRTHDAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USEREMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIP.EXPIRETIME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUSICIAN.MUSICIANINTRO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.USERID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.USERID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.USERID })
+        </td>
+    </tr>
+}
+
+</table>

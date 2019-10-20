@@ -1,0 +1,120 @@
+﻿@model muse.Models.MUSIC
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MUSIC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUBLISHER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUBLISHER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUBLISHTIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUBLISHTIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DURATION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DURATION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIKES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIKES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLAYTIMES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLAYTIMES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICCOVER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICCOVER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICPATH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICPATH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LYRICS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LYRICS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALBUM.ALBUMNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALBUM.ALBUMNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SINGER.SINGERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SINGER.SINGERNAME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

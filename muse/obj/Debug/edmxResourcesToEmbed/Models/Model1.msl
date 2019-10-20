@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ADMIN">
+      <EntityTypeMapping TypeName="Model.ADMIN">
+        <MappingFragment StoreEntitySet="ADMIN">
+          <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+          <ScalarProperty Name="ADMINNAME" ColumnName="ADMINNAME" />
+          <ScalarProperty Name="ADMINPASSWORD" ColumnName="ADMINPASSWORD" />
+          <ScalarProperty Name="ADMINIMAGE" ColumnName="ADMINIMAGE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADVISOR">
+      <EntityTypeMapping TypeName="Model.ADVISOR">
+        <MappingFragment StoreEntitySet="ADVISOR">
+          <ScalarProperty Name="S_ID" ColumnName="S_ID" />
+          <ScalarProperty Name="I_ID" ColumnName="I_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAN">
+      <EntityTypeMapping TypeName="Model.BAN">
+        <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+          <ScalarProperty Name="BANTIME" ColumnName="BANTIME" />
+          <ScalarProperty Name="BANREASON" ColumnName="BANREASON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BUY">
+      <EntityTypeMapping TypeName="Model.BUY">
+        <MappingFragment StoreEntitySet="BUY">
+          <ScalarProperty Name="SONGID" ColumnName="SONGID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="BUYTIME" ColumnName="BUYTIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASSROOM">
+      <EntityTypeMapping TypeName="Model.CLASSROOM">
+        <MappingFragment StoreEntitySet="CLASSROOM">
+          <ScalarProperty Name="BUILDING" ColumnName="BUILDING" />
+          <ScalarProperty Name="ROOM_NUMBER" ColumnName="ROOM_NUMBER" />
+          <ScalarProperty Name="CAPACITY" ColumnName="CAPACITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSE">
+      <EntityTypeMapping TypeName="Model.COURSE">
+        <MappingFragment StoreEntitySet="COURSE">
+          <ScalarProperty Name="COURSE_ID" ColumnName="COURSE_ID" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DEPT_NAME" ColumnName="DEPT_NAME" />
+          <ScalarProperty Name="CREDITS" ColumnName="CREDITS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRIEND">
+      <EntityTypeMapping TypeName="Model.FRIEND">
+        <MappingFragment StoreEntitySet="FRIEND">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FRIENDID" ColumnName="FRIENDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HELP">
+      <EntityTypeMapping TypeName="Model.HELP">
+        <MappingFragment StoreEntitySet="HELP">
+          <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="INFO" ColumnName="INFO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

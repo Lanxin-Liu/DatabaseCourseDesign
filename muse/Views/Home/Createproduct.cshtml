@@ -1,0 +1,275 @@
+﻿@{
+    Layout = null;
+}
+@model muse.Controllers.HomeController.MycreateSender
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Muse</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/fev.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- animate -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <!-- owl theme default -->
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- scrollable -->
+    <link rel="stylesheet" href="/assets/css/jquery.scrollable.css">
+    <!-- audioplayer -->
+    <link rel="stylesheet" href="/assets/css/audioplayer.css">
+    <!-- menu -->
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <!-- main -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <!-- default -->
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <!-- color -->
+    <link rel="stylesheet" href="/assets/css/color.css">
+    <link herf="/assets/css/2.css">
+    <link rel="stylesheet" herf="/assets/css/create.css">
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+    <header class="header-nav-area js-common-nav sticky-on">
+        <!-- header-nav -->
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-2 col-sm-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="/assets/images/logo.png" alt="Devaid logo"></a>
+                    </div>
+                </div>
+                <!-- col-lg-4 -->
+                <div class="col-md-7 header-nav-none">
+                    <nav class="header-nav">
+                        <div class="cssmenu" data-title="Menu">
+                            <ul class="menu list-inline">
+                                <li class="active">
+                                    <a href="/Home/index">发现</a>
+                                </li>
+                                <li>
+                                    <a href="/Home/Myinfo">我的信息</a>
+                                </li>
+                                <li>
+                                    <a href="/Home/Songlist">我的歌单</a>
+                                </li>
+                                <li>
+                                    <a href="/Home/Playhistory">我的历史</a>
+                                </li>
+                                <li>
+                                    <a href="/Home/News">消息中心</a>
+                                </li>
+                                <li>
+                                    <a href="/Home/Createproduct">我的创作</a>
+                                </li>
+                                <li>
+                                    <a href="/Search/Searchresult">搜索</a>
+                                </li>
+                            </ul>
+                        </div><!-- #header-menu-wrap -->
+                    </nav><!-- .header-nav -->
+                </div><!-- col-lg-7 -->
+
+                <div class="col-md-3 pl-0 pull-right">
+                    <div class="header-icon text-right">
+                        <ul class="list-inline">
+                            <li class="music primary-bg" id="js-music"> <i class="fa fa-music"></i></li>
+                            <li class=""><a href="login.html"><i class="fa fa-sign-in"></i></a></li>
+                            <li class="sidebar-menu"><span id="sidebar_menu_icon"><img alt="Icon" src="/assets/images/menu.png"></span></li>
+                        </ul>
+                    </div><!-- header-icon -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </header><!-- header-nav -->
+
+    <div class="js-offcanvas-menu js-index1-nav" id="js_offcanvas_menu">
+        <nav class="header-nav">
+            <span class="js-offcanvas-close"><i class="pe-7s-close"></i></span>
+            <div class="cssmenu" data-title="Menu">
+                <ul class="menu list-inline">
+                    <li class="active">
+                        <a href="/Home/index">发现</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Myinfo">我的信息</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Songlist">我的歌单</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Playhistory">我的历史</a>
+                    </li>
+                    <li>
+                        <a href="/Home/News">消息中心</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Createproduct">我的创作</a>
+                    </li>
+                    <li>
+                        <a href="/Search/Searchresult">搜索</a>
+                    </li>
+                </ul>
+            </div><!-- #header-menu-wrap -->
+            
+        </nav> <!-- header-nav -->
+    </div><!-- js-offcanvas-menu -->
+
+    <section class="js-breadcrumb-area">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12 text-center has-color">
+                    <div class="js-breadcrumb-content">
+                        <h2 class="text-white">个人创作</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- js-breadcrumb-area -->
+    <div class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="has-color" style="margin-left: 40px">
+
+
+
+
+                        @*@using (Html.BeginForm("Create", "Mycreate", FormMethod.Post))
+                            {*@
+                        <form action="" method="post" enctype="multipart/form-data" class="js-footer-subscribe-form1">
+                            <p></p>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">歌曲名：</h2>
+
+                                </div>
+                                <div class="col-sm-7" name="songname" style="width:70% ;height: 50%; position:relative;top:20%">
+
+                                    @*@Html.TextBoxFor(m => m.songname, new { @class = "input", @id = "songname", @required = true })*@
+                                    <input type="text" name="songername" style="width:70% ;height: 50%; position:relative;top:20%" placeholder="歌曲名">
+                                </div>
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">创作者：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" name="singername" style="width:70% ;height: 50%; position:relative;top:20%" placeholder="">
+                                    @*@Html.TextBoxFor(m => m.singername, new { @class = "input", @id = "singername", @required = true })*@
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">风格：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" name="style" style="width:70% ;height: 50%; position:relative;top:20%" placeholder="流行/摇滚/民谣…">
+                                    @*@Html.TextBoxFor(m => m.style, new { @class = "input", @id = "style", @required = true })*@
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">时长：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" name="duration" style="width:70% ;height: 50%; position:relative;top:20%" placeholder="mm/ss">
+                                    @*@Html.TextBoxFor(m => m.duration, new { @class = "input", @id = "duration", @required = true })*@
+                                </div>
+                            </div>
+                            @*<div class="col-lg-4 ">
+
+                                    <input type="submit" class="btn btn-primary" value="登录" />
+
+                                </div>*@
+                            @*</form>*@
+
+                            @*<p>@ViewBag.id</p>*    
+                                
+                                
+                                @
+
+
+                            @*<form action="" method="post" enctype="multipart/form-data">*@
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">请上传音频：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="file" name="file1" style="width:70% ;height: 50%; position:relative;top:27%">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">请上传歌词：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="file" name="file2" style="width:70% ;height: 50%; position:relative;top:27%">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h2 class="text-left" style="margin: 10px">请上传封面：</h2>
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="file" name="file3" style="width:70% ;height: 50%; position:relative;top:27%">
+                                </div>
+                            </div>
+                            <p>  </p>
+                            <div align=center>
+                                <div class="col-lg-4 ">
+
+                                    <input type="submit" class="btn btn-primary" value="提交" />
+
+                                </div>
+                            </div>
+
+
+                        </form>
+                        @*}*@
+                    </div>
+                </div>
+                <!-- Col-md-10 -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <footer class="js-footer-area bg-dark has-color pb-100">
+        <!-- footer-area -->
+    </footer>
+    <script src="/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/countdown.js"></script>
+    <script src="/assets/js/jquery.jplayer.min.js"></script>
+    <script src="/assets/js/jplayer.playlist.min.js"></script>
+    <script src="/assets/js/audio-player.js"></script>
+    <script src="/assets/js/audioplayer.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADMINNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADMINPASSWORD" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADMINIMAGE" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BAN" Relationship="Self.SYS_C0010532" FromRole="ADMIN" ToRole="BAN" />
+  </EntityType>
+  <EntityType Name="ADVISOR">
+    <Key>
+      <PropertyRef Name="S_ID" />
+    </Key>
+    <Property Name="S_ID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="I_ID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="USERID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADMINID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BANTIME" Type="DateTime" />
+    <Property Name="BANREASON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ADMIN" Relationship="Self.SYS_C0010532" FromRole="BAN" ToRole="ADMIN" />
+  </EntityType>
+  <EntityType Name="BUY">
+    <Key>
+      <PropertyRef Name="SONGID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="SONGID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USERID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BUYTIME" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="CLASSROOM">
+    <Key>
+      <PropertyRef Name="BUILDING" />
+      <PropertyRef Name="ROOM_NUMBER" />
+    </Key>
+    <Property Name="BUILDING" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ROOM_NUMBER" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAPACITY" Type="Int16" />
+  </EntityType>
+  <EntityType Name="COURSE">
+    <Key>
+      <PropertyRef Name="COURSE_ID" />
+    </Key>
+    <Property Name="COURSE_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TITLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEPT_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CREDITS" Type="Byte" />
+  </EntityType>
+  <EntityType Name="FRIEND">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="FRIENDID" />
+    </Key>
+    <Property Name="USERID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FRIENDID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HELP">
+    <Key>
+      <PropertyRef Name="TOPIC" />
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SEQ" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="INFO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="SYS_C0010532">
+    <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="1" />
+    <End Role="BAN" Type="Self.BAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMIN">
+        <PropertyRef Name="ADMINID" />
+      </Principal>
+      <Dependent Role="BAN">
+        <PropertyRef Name="ADMINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" />
+    <EntitySet Name="ADVISOR" EntityType="Self.ADVISOR" />
+    <EntitySet Name="BAN" EntityType="Self.BAN" />
+    <EntitySet Name="BUY" EntityType="Self.BUY" />
+    <EntitySet Name="CLASSROOM" EntityType="Self.CLASSROOM" />
+    <EntitySet Name="COURSE" EntityType="Self.COURSE" />
+    <EntitySet Name="FRIEND" EntityType="Self.FRIEND" />
+    <EntitySet Name="HELP" EntityType="Self.HELP" />
+    <AssociationSet Name="SYS_C0010532" Association="Self.SYS_C0010532">
+      <End Role="ADMIN" EntitySet="ADMIN" />
+      <End Role="BAN" EntitySet="BAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

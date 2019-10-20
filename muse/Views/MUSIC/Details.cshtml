@@ -1,0 +1,114 @@
+﻿@model muse.Models.MUSIC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MUSIC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUBLISHER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUBLISHER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUBLISHTIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUBLISHTIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DURATION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DURATION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIKES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIKES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLAYTIMES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLAYTIMES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICCOVER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICCOVER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUSICPATH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUSICPATH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LYRICS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LYRICS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALBUM.ALBUMNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALBUM.ALBUMNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SINGER.SINGERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SINGER.SINGERNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MUSICID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

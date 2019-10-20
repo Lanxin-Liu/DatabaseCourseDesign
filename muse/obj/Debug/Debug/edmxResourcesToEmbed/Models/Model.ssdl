@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALBUM">
+    <Key>
+      <PropertyRef Name="ALBUMID" />
+    </Key>
+    <Property Name="ALBUMID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ALBUMNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="ALBUMIMAGE" Type="varchar2" MaxLength="120" />
+    <Property Name="ALBUMPBTIME" Type="char" MaxLength="10" />
+    <Property Name="SINGERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="ALBUMINTRO" Type="char" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BUYHISTORY">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="MUSICID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BUYTIME" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="COLLETION">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="SONGLISTID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SONGLISTID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COMMENTS">
+    <Key>
+      <PropertyRef Name="MUSICID" />
+      <PropertyRef Name="COMMENTNUMBER" />
+    </Key>
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COMMENTNUMBER" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="CONTENT" Type="varchar2" MaxLength="200" />
+    <Property Name="SUBMITTIME" Type="char" MaxLength="10" />
+    <Property Name="LIKES" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="FAULT">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="OBJECTID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FAULTTYPE" Type="number" Precision="38" Scale="0" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="FRIENDS">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="FRIENDID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FRIENDID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HISTORY">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="MUSICID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PLAYEDTIMES" Type="number" Precision="38" Scale="0" />
+    <Property Name="PLAYSEQUENCE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HONOR">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="MEDALID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MEDALID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="MADMIN">
+    <Key>
+      <PropertyRef Name="ADMINID" />
+    </Key>
+    <Property Name="ADMINID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ADMINPASSWORD" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MEDAL">
+    <Key>
+      <PropertyRef Name="MEDALID" />
+    </Key>
+    <Property Name="MEDALID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MEDALNAME" Type="char" MaxLength="100" />
+    <Property Name="MEDALINTRO" Type="char" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="MUSER">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="USERPASSWORD" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="USERIMAGE" Type="varchar2" MaxLength="120" />
+    <Property Name="USERSEX" Type="varchar2" MaxLength="6" />
+    <Property Name="USERBIRTHDAY" Type="char" MaxLength="10" />
+    <Property Name="USEREMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MUSIC">
+    <Key>
+      <PropertyRef Name="MUSICID" />
+    </Key>
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MUSICNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="SINGERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="PUBLISHER" Type="varchar2" MaxLength="100" />
+    <Property Name="PUBLISHTIME" Type="char" MaxLength="10" />
+    <Property Name="ALBUMID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DURATION" Type="number" Precision="38" Scale="0" />
+    <Property Name="PRICE" Type="number" Precision="5" Scale="2" />
+    <Property Name="LIKES" Type="number" Precision="38" Scale="0" />
+    <Property Name="PLAYTIMES" Type="number" Precision="38" Scale="0" />
+    <Property Name="MUSICCOVER" Type="varchar2" MaxLength="120" />
+    <Property Name="MUSICPATH" Type="varchar2" MaxLength="120" />
+    <Property Name="LYRICS" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MUSICIAN">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MUSICIANINTRO" Type="varchar2" MaxLength="200" />
+    <Property Name="SINGERID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="MUSICIANWORKS">
+    <Key>
+      <PropertyRef Name="WORKS" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="WORKS" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="MUSICTAG">
+    <Key>
+      <PropertyRef Name="MUSICID" />
+      <PropertyRef Name="TAGNAME" />
+    </Key>
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TAGNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SINGER">
+    <Key>
+      <PropertyRef Name="SINGERID" />
+    </Key>
+    <Property Name="SINGERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SINGERNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="SINGERIMAGE" Type="varchar2" MaxLength="120" />
+    <Property Name="SINGERINTRO" Type="char" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SONGLIST">
+    <Key>
+      <PropertyRef Name="SONGLISTID" />
+    </Key>
+    <Property Name="SONGLISTID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SONGLISTNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="COLLECTIONTIMES" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SONGLISTMUSIC">
+    <Key>
+      <PropertyRef Name="MUSICID" />
+      <PropertyRef Name="SONGLISTID" />
+    </Key>
+    <Property Name="MUSICID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SONGLISTID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="TAG">
+    <Key>
+      <PropertyRef Name="TAGNAME" />
+    </Key>
+    <Property Name="TAGNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERSONGLIST">
+    <Key>
+      <PropertyRef Name="SONGLISTID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="SONGLISTID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTRIBUTEORDER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="VIP">
+    <Key>
+      <PropertyRef Name="VIPID" />
+    </Key>
+    <Property Name="VIPID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXPIRETIME" Type="char" MaxLength="10" />
+    <Property Name="DAYS" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <Association Name="SYS_C0011190">
+    <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ALBUM" Type="Self.ALBUM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINGER">
+        <PropertyRef Name="SINGERID" />
+      </Principal>
+      <Dependent Role="ALBUM">
+        <PropertyRef Name="SINGERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011192">
+    <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINGER">
+        <PropertyRef Name="SINGERID" />
+      </Principal>
+      <Dependent Role="MUSIC">
+        <PropertyRef Name="SINGERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011193">
+    <End Role="ALBUM" Type="Self.ALBUM" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALBUM">
+        <PropertyRef Name="ALBUMID" />
+      </Principal>
+      <Dependent Role="MUSIC">
+        <PropertyRef Name="ALBUMID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011195">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSICTAG" Type="Self.MUSICTAG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="MUSICTAG">
+        <PropertyRef Name="MUSICID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011197">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SONGLIST" Type="Self.SONGLIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="SONGLIST">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011199">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SONGLISTMUSIC" Type="Self.SONGLISTMUSIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="SONGLISTMUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011200">
+    <End Role="SONGLIST" Type="Self.SONGLIST" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SONGLISTMUSIC" Type="Self.SONGLISTMUSIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SONGLIST">
+        <PropertyRef Name="SONGLISTID" />
+      </Principal>
+      <Dependent Role="SONGLISTMUSIC">
+        <PropertyRef Name="SONGLISTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011202">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FRIENDS" Type="Self.FRIENDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="FRIENDS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011203">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FRIENDS" Type="Self.FRIENDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="FRIENDS">
+        <PropertyRef Name="FRIENDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011205">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VIP" Type="Self.VIP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="VIP">
+        <PropertyRef Name="VIPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011207">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HISTORY" Type="Self.HISTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="HISTORY">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011208">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HISTORY" Type="Self.HISTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="HISTORY">
+        <PropertyRef Name="MUSICID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011210">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMENTS" Type="Self.COMMENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="COMMENTS">
+        <PropertyRef Name="MUSICID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011211">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMENTS" Type="Self.COMMENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="COMMENTS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011213">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSICIAN" Type="Self.MUSICIAN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="MUSICIAN">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011214">
+    <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSICIAN" Type="Self.MUSICIAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINGER">
+        <PropertyRef Name="SINGERID" />
+      </Principal>
+      <Dependent Role="MUSICIAN">
+        <PropertyRef Name="SINGERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011216">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSICIANWORKS" Type="Self.MUSICIANWORKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="MUSICIANWORKS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011217">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MUSICIANWORKS" Type="Self.MUSICIANWORKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="MUSICIANWORKS">
+        <PropertyRef Name="WORKS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011219">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COLLETION" Type="Self.COLLETION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="COLLETION">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011220">
+    <End Role="SONGLIST" Type="Self.SONGLIST" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COLLETION" Type="Self.COLLETION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SONGLIST">
+        <PropertyRef Name="SONGLISTID" />
+      </Principal>
+      <Dependent Role="COLLETION">
+        <PropertyRef Name="SONGLISTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011223">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HONOR" Type="Self.HONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="HONOR">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011224">
+    <End Role="MEDAL" Type="Self.MEDAL" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HONOR" Type="Self.HONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MEDAL">
+        <PropertyRef Name="MEDALID" />
+      </Principal>
+      <Dependent Role="HONOR">
+        <PropertyRef Name="MEDALID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011226">
+    <End Role="MUSIC" Type="Self.MUSIC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BUYHISTORY" Type="Self.BUYHISTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSIC">
+        <PropertyRef Name="MUSICID" />
+      </Principal>
+      <Dependent Role="BUYHISTORY">
+        <PropertyRef Name="MUSICID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011227">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BUYHISTORY" Type="Self.BUYHISTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="BUYHISTORY">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011229">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FAULT" Type="Self.FAULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="FAULT">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011231">
+    <End Role="MUSER" Type="Self.MUSER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USERSONGLIST" Type="Self.USERSONGLIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUSER">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="USERSONGLIST">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011232">
+    <End Role="SONGLIST" Type="Self.SONGLIST" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USERSONGLIST" Type="Self.USERSONGLIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SONGLIST">
+        <PropertyRef Name="SONGLISTID" />
+      </Principal>
+      <Dependent Role="USERSONGLIST">
+        <PropertyRef Name="SONGLISTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ALBUM" EntityType="Self.ALBUM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="BUYHISTORY" EntityType="Self.BUYHISTORY" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="COLLETION" EntityType="Self.COLLETION" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="COMMENTS" EntityType="Self.COMMENTS" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="FAULT" EntityType="Self.FAULT" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="FRIENDS" EntityType="Self.FRIENDS" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HISTORY" EntityType="Self.HISTORY" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HONOR" EntityType="Self.HONOR" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MADMIN" EntityType="Self.MADMIN" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MEDAL" EntityType="Self.MEDAL" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MUSER" EntityType="Self.MUSER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MUSIC" EntityType="Self.MUSIC" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MUSICIAN" EntityType="Self.MUSICIAN" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MUSICIANWORKS" EntityType="Self.MUSICIANWORKS" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="MUSICTAG" EntityType="Self.MUSICTAG" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="SINGER" EntityType="Self.SINGER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="SONGLIST" EntityType="Self.SONGLIST" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="SONGLISTMUSIC" EntityType="Self.SONGLISTMUSIC" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="TAG" EntityType="Self.TAG" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="USERSONGLIST" EntityType="Self.USERSONGLIST" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="VIP" EntityType="Self.VIP" Schema="SYSTEM" store:Type="Tables" />
+    <AssociationSet Name="SYS_C0011190" Association="Self.SYS_C0011190">
+      <End Role="SINGER" EntitySet="SINGER" />
+      <End Role="ALBUM" EntitySet="ALBUM" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011192" Association="Self.SYS_C0011192">
+      <End Role="SINGER" EntitySet="SINGER" />
+      <End Role="MUSIC" EntitySet="MUSIC" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011193" Association="Self.SYS_C0011193">
+      <End Role="ALBUM" EntitySet="ALBUM" />
+      <End Role="MUSIC" EntitySet="MUSIC" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011195" Association="Self.SYS_C0011195">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="MUSICTAG" EntitySet="MUSICTAG" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011197" Association="Self.SYS_C0011197">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="SONGLIST" EntitySet="SONGLIST" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011199" Association="Self.SYS_C0011199">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="SONGLISTMUSIC" EntitySet="SONGLISTMUSIC" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011200" Association="Self.SYS_C0011200">
+      <End Role="SONGLIST" EntitySet="SONGLIST" />
+      <End Role="SONGLISTMUSIC" EntitySet="SONGLISTMUSIC" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011202" Association="Self.SYS_C0011202">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="FRIENDS" EntitySet="FRIENDS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011203" Association="Self.SYS_C0011203">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="FRIENDS" EntitySet="FRIENDS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011205" Association="Self.SYS_C0011205">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="VIP" EntitySet="VIP" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011207" Association="Self.SYS_C0011207">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="HISTORY" EntitySet="HISTORY" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011208" Association="Self.SYS_C0011208">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="HISTORY" EntitySet="HISTORY" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011210" Association="Self.SYS_C0011210">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="COMMENTS" EntitySet="COMMENTS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011211" Association="Self.SYS_C0011211">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="COMMENTS" EntitySet="COMMENTS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011213" Association="Self.SYS_C0011213">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="MUSICIAN" EntitySet="MUSICIAN" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011214" Association="Self.SYS_C0011214">
+      <End Role="SINGER" EntitySet="SINGER" />
+      <End Role="MUSICIAN" EntitySet="MUSICIAN" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011216" Association="Self.SYS_C0011216">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="MUSICIANWORKS" EntitySet="MUSICIANWORKS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011217" Association="Self.SYS_C0011217">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="MUSICIANWORKS" EntitySet="MUSICIANWORKS" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011219" Association="Self.SYS_C0011219">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="COLLETION" EntitySet="COLLETION" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011220" Association="Self.SYS_C0011220">
+      <End Role="SONGLIST" EntitySet="SONGLIST" />
+      <End Role="COLLETION" EntitySet="COLLETION" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011223" Association="Self.SYS_C0011223">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="HONOR" EntitySet="HONOR" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011224" Association="Self.SYS_C0011224">
+      <End Role="MEDAL" EntitySet="MEDAL" />
+      <End Role="HONOR" EntitySet="HONOR" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011226" Association="Self.SYS_C0011226">
+      <End Role="MUSIC" EntitySet="MUSIC" />
+      <End Role="BUYHISTORY" EntitySet="BUYHISTORY" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011227" Association="Self.SYS_C0011227">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="BUYHISTORY" EntitySet="BUYHISTORY" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011229" Association="Self.SYS_C0011229">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="FAULT" EntitySet="FAULT" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011231" Association="Self.SYS_C0011231">
+      <End Role="MUSER" EntitySet="MUSER" />
+      <End Role="USERSONGLIST" EntitySet="USERSONGLIST" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011232" Association="Self.SYS_C0011232">
+      <End Role="SONGLIST" EntitySet="SONGLIST" />
+      <End Role="USERSONGLIST" EntitySet="USERSONGLIST" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
